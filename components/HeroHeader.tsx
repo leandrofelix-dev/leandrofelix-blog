@@ -9,13 +9,6 @@ export default function HeroHeader() {
   return (
     <div className="py-24 text-center bg-gray-100">
       <Container>
-        {siteData?.profileUrl && (
-          <img
-            src={siteData.profileUrl}
-            className="w-24 h-24 mx-auto rounded-full"
-            alt="profile"
-          />
-        )}
         <div className="mt-4 text-3xl font-extrabold text-gray-900">
           {siteData.headerTitle}
         </div>
@@ -25,6 +18,7 @@ export default function HeroHeader() {
 
         {FORM_ID! && API_KEY! && (
           <div className="mt-12">
+            oooooooooooooo
             <SubscribeInput />
           </div>
         )}

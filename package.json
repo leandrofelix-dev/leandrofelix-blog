@@ -1,8 +1,8 @@
 {
   "private": true,
   "description": "Notion-powered blog starter with Nextjs and Tailwind",
-  "repository": "https://github.com/leandrofelix-dev/leandrofelix-blog",
-  "homepage": "https://blog.leandrofelix.dev.br",
+  "repository": "https://github.com/leandrofelix-dev/blog-alfa-comunicacao",
+  "homepage": "https://blog.alfacomun.com.br",
   "author": "Leandro Felix <leandrofelix-dev>",
   "license": "MIT",
   "scripts": {
