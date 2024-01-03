@@ -1,9 +1,9 @@
 const siteData = {
-  title: 'Blog | Alfa Comunicação Visual',
+  title: 'Blog | Leandro Felix',
   author: 'Leandro Felix',
-  headerTitle: 'Alfa Comunicação Visual',
-  headerDescription: 'Starter Notion blog for Nextjs with Tailwind',
-  footerText: '@ 2024 Alfa Comunicação Visual. Todos os direitos reservados. Feito com 💙 por leandrofelix.dev.br.',
+  headerTitle: 'Leandro Felix',
+  headerDescription: 'Tutoriais de tecnologia por quem vive de tecnologia.',
+  footerText: '@ 2024 Leandro Felix Dev. Todos os direitos reservados. Feito com 💙.',
   language: 'pt-br',
   locale: 'pt-BR',
   socialBanner: 'https://nextjs-notion-blog-starter.vercel.app/preview/1.jpg',
