@@ -7,8 +7,7 @@ import { renderBlocks } from 'components/notionBlocks/renderBlocks'
 import getLocalizedDate from 'utils/getLocalizedDate'
 import Container from 'components/Container'
 import slugify from 'slugify'
-import ArticleList from 'components/ArticleList'
-import siteData from 'data/siteData'
+import ArticleList from 'components/organisms/article-list'
 
 const ArticlePage = ({
   content,

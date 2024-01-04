@@ -5,13 +5,13 @@ export function SocialLinks() {
   return (
     <div className="flex gap-4">
       <Link href={links.linkedin}>
-        <LinkedinLogo size={24} weight="fill" />
+        <LinkedinLogo size={24} weight="fill" className='text-slate-900 hover:text-blue-700'/>
       </Link>
       <Link href={links.github}>
-      <GithubLogo size={24} weight="fill" />
+      <GithubLogo size={24} weight="fill" className='text-slate-900 hover:text-slate-700'/>
         </Link>
       <Link href={links.instagram}>
-        <InstagramLogo size={24} weight="fill" />
+        <InstagramLogo size={24} weight="fill" className='text-slate-900  hover:text-pink-700'/>
       </Link>
     </div>
   )

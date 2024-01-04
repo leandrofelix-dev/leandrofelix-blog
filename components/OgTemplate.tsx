@@ -6,7 +6,7 @@ export default function OgTemplate({ date, title }) {
           <div className="">{date}</div>
         </div>
         <div className="mt-4 mb-8 font-extrabold text-7xl leading-[80px] text-center">
-          {title}
+          {title} OIIII
         </div>
       </div>
     </div>

@@ -3,9 +3,9 @@ import { Layout } from 'layouts/Layout'
 import HeroHeader from 'components/HeroHeader'
 import Container from 'components/Container'
 import { useState } from 'react'
-import ArticleList from 'components/ArticleList'
 import { filterArticles } from 'utils/filterArticles'
-import Category from 'components/Category'
+import Category from 'components/atoms/category'
+import ArticleList from 'components/organisms/article-list'
 
 export default function Index({ articles, categories }) {
   const [selectedTag, setSelectedTag] = useState<string>(null)
@@ -27,7 +27,7 @@ export default function Index({ articles, categories }) {
       <Container>
         <div className="py-8">
           <div className="my-8 text-3xl font-bold text-gray-900">
-            {!selectedTag ? 'Latest articles' : `${selectedTag} articles`}
+            {!selectedTag ? 'Últimas postagens' : `Postagens sobre ${selectedTag}`}
           </div>
           <ArticleList articles={filteredArticles} />
         </div>

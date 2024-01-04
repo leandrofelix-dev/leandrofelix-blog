@@ -4,6 +4,7 @@ module.exports = {
   },
   images: {
     domains: [
+      'prod-files-secure.s3.us-west-2.amazonaws.com',
       's3.us-west-2.amazonaws.com', // Images coming from Notion
       'via.placeholder.com', // for articles that do not have a cover image
       'images.unsplash.com', // For blog articles that use an external cover ima ge
