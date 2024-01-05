@@ -16,7 +16,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^14.0.4",
     "@notionhq/client": "^0.4.4",
     "@phosphor-icons/react": "^2.0.15",
     "@tailwindcss/line-clamp": "^0.4.0",
