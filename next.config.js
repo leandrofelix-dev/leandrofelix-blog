@@ -1,18 +1,42 @@
 module.exports = {
   images: {
-    unoptimized: true
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 's3.us-west-2.amazonaws.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'dwgyu36up6iuz.cloudfront.net'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.hashnode.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.craft.do'
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com'
+      },
+    ],
   },
-  images: {
-    domains: [
-      'prod-files-secure.s3.us-west-2.amazonaws.com',
-      's3.us-west-2.amazonaws.com', // Images coming from Notion
-      'via.placeholder.com', // for articles that do not have a cover image
-      'images.unsplash.com', // For blog articles that use an external cover ima ge
-      'pbs.twimg.com', // Twitter Profile Picture
-      'dwgyu36up6iuz.cloudfront.net',
-      'cdn.hashnode.com',
-      'res.craft.do',
-      'res.cloudinary.com'
-    ]
-  }
 }
