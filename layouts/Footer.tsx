@@ -4,8 +4,6 @@ import { Separator } from 'components/molecules/separator'
 import { SocialLinks } from 'components/molecules/social-links'
 import { WebsiteLinks } from 'components/molecules/website-links'
 import links from 'data/links'
-import Link from 'next/link'
-import { firaCode } from 'pages/_app'
 
 export default function Footer() {
   return (
@@ -16,7 +14,7 @@ export default function Footer() {
         <div className="mt-4 flex flex-col">
           <WebsiteLinks
             link={links.portfolio}
-            description={'Portfólio para concentrar informações sobre mim.'}
+            description={'Portfolio para concentrar informações sobre mim.'}
           />
         </div>
       </Container>

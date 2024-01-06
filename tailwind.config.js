@@ -6,7 +6,9 @@ module.exports = {
     './lib/**/*.tsx'
   ],
   theme: {
-    extend: {}
+    backgroundImage: {
+      'hero': 'url(\'/hero.png\')',
+    }
   },
   plugins: []
 }
