@@ -29,6 +29,7 @@ export function MetaHead(props) {
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
       {date && <meta property="article:published_time" content={date} />}
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Head>
   )
 }

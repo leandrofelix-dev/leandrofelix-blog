@@ -13,7 +13,7 @@ export default function Category({ setSelectedTag, tag, selectedTag }) {
       key={tag}
       onClick={() => handleTagClick(tag)}
       className={`${
-        selectedTag === tag && 'border bg-slate-900 text-slate-100 hover:bg-slate-800'
+        selectedTag === tag && 'border bg-gray-900 text-slate-100 hover:bg-slate-900'
       } border border-slate-200 inline-flex items-center px-3.5 py-1.5 uppercase bg-slate-100 rounded-xl cursor-pointer hover:bg-slate-50/50 hover:shadow-sm`}
     >
       <span
