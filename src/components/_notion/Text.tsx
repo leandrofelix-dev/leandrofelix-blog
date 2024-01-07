@@ -1,3 +1,5 @@
+import { firaCode } from 'pages/_app'
+
 export default function Text({ text }) {
   if (!text) {
     return null
@@ -10,16 +12,17 @@ export default function Text({ text }) {
     return (
       <span
         key={index}
-        className={[
+        className={[firaCode.className,
           bold ? 'font-bold' : null,
           italic ? 'italic' : null,
           code
-            ? 'bg-gray-200 font-semibold  text-gray-500 text-sm px-2 rounded mx-1 inline-block align-middle tracking-tight'
+            ? 'bg-gray-200 font-semibold text-sm px-2 rounded mx-1 inline-block align-middle tracking-tight'
             : null,
           strikethrough ? 'line-through' : null,
           underline ? 'underline' : null,
         ].join(' ')}
-        style={color !== 'default' ? { color } : {}}
+        style={color !== 'default' ? { color } : {}
+      }
       >
         {text.link ? (
           <a className="text-gray-700 underline" href={text.link.url}>
