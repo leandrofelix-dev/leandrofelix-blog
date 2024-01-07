@@ -26,7 +26,7 @@
 
 - `layouts/*` - The different layouts used on each page.
 - `components/*` - Components used throughout the site.
-- `components/notionBlocks/*` - Custom blocks made for Notion rendering.
+- `components/_notion/*` - Custom blocks made for Notion rendering.
 - `utils/*` - Short for "utilities", a collection of helpful utilities or code for external services.
 - `pages/api/*` - [API routes](https://nextjs.org/docs/api-routes/introduction) powering [`/og-image`](https://github.com/neg4n/next-api-og-image) dynamic OG image and [`/subscribe-convertkit`](https://github.com/tuanphungcz/nextjs-notion-blog-starter/blob/main/pages/api/subscribe-convertkit.tsx) newsletter subscription.
 - `pages/blog/*` - Static pre-rendered blog pages that fetch information from the Notion API.

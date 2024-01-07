@@ -1,4 +1,4 @@
-import ArticleCard from 'components/molecules/article-card'
+import ArticleCard from 'src/components/molecules/article-card'
 import { Article } from 'utils/types'
 
 type Props = {

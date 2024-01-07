@@ -1,6 +1,6 @@
 import { Article } from 'utils/types'
 import slugify from 'slugify'
-import getLocalizedDate from 'utils/getLocalizedDate'
+import getLocalizedDate from 'utils/get-localized-date'
 import Image from 'next/image'
 import { firaCode, inter } from 'pages/_app'
 

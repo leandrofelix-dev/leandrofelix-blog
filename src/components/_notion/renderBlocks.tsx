@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import Image from 'next/image'
-import Text from 'components/notionBlocks/Text'
-import AnchorLink from 'components/notionBlocks/AnchorLink'
-import CodeBlock from 'components/notionBlocks/CodeBlock'
-import Callout from 'components/notionBlocks/Callout'
-import YoutubeEmbed from 'components/notionBlocks/YoutubeEmbed'
+import Text from 'src/components/_notion/Text'
+import AnchorLink from 'src/components/_notion/AnchorLink'
+import CodeBlock from 'src/components/_notion/CodeBlock'
+import Callout from 'src/components/_notion/Callout'
+import YoutubeEmbed from 'src/components/_notion/YoutubeEmbed'
 
 export function renderBlocks(block) {
   const { type, id } = block

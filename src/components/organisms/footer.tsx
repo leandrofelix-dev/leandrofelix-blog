@@ -1,12 +1,12 @@
-import { Label } from 'components/atoms/footer-section-label'
-import { Separator } from 'components/molecules/separator'
-import { SocialLinks } from 'components/molecules/social-links'
-import { WebsiteLinks } from 'components/molecules/website-links'
+import { Label } from 'src/components/atoms/footer-section-label'
+import { Separator } from 'src/components/molecules/separator'
+import { SocialLinks } from 'src/components/molecules/social-links'
+import { WebsiteLinks } from 'src/components/molecules/website-links'
 import links from 'data/links'
 
-import Confetti from 'components/atoms/confetti'
+import Confetti from 'src/components/atoms/confetti'
 import { useState } from 'react'
-import Container from 'components/molecules/container'
+import Container from 'src/components/molecules/container'
 
 export default function Footer() {
   const [isConfettiVisible, setIsConfettiVisible] = useState(false)

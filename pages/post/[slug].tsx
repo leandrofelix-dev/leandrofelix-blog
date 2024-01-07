@@ -1,13 +1,13 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
 import { getAllArticles, getArticlePage, getArticlePageData } from 'utils/notion'
-import { Layout } from 'layouts/Layout'
+import { Layout } from 'src/components/templates/layout'
 import Image from 'next/image'
-import { renderBlocks } from 'components/notionBlocks/renderBlocks'
-import getLocalizedDate from 'utils/getLocalizedDate'
+import { renderBlocks } from 'src/components/_notion/renderBlocks'
+import getLocalizedDate from 'utils/get-localized-date'
 import slugify from 'slugify'
-import ArticleList from 'components/organisms/article-list'
-import Container from 'components/molecules/container'
+import ArticleList from 'src/components/organisms/article-list'
+import Container from 'src/components/molecules/container'
 
 const ArticlePage = ({
   content,
@@ -26,9 +26,6 @@ const ArticlePage = ({
     title
   )}&date=${encodeURIComponent(publishedOn)}`
 
-  // const ogImage = `${siteData.websiteUrl}/api/og-image?title=${encodeURIComponent(
-  //   title
-  // )}&date=${encodeURIComponent(publishedOn)}`
 
   return (
     <>

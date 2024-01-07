@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from 'react'
 
 import copy from 'copy-to-clipboard'
 
-// By default will copy URL to clipboard if text is not passed to the hook.
 export function useCopyToClipboard(resetInterval = 3000, text = null) {
   const [isCopied, setCopied] = useState(false)
 

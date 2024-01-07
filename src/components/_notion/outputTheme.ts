@@ -1,5 +1,4 @@
-// @flow
-// Converted automatically using ./tools/themeFromVsCode
+
 
 import { PrismTheme } from 'prism-react-renderer'
 
