@@ -1,9 +1,9 @@
 import { firaCode } from 'pages/_app'
 
 export default function Text({ text }) {
-  if (!text) {
+  if (!text)
     return null
-  }
+
   return text.map((value, index) => {
     const {
       annotations: { bold, code, color, italic, strikethrough, underline },

@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 import Image from 'next/image'
-import Text from 'src/components/_notion/Text'
-import AnchorLink from 'src/components/_notion/AnchorLink'
-import CodeBlock from 'src/components/_notion/CodeBlock'
-import Callout from 'src/components/_notion/Callout'
-import YoutubeEmbed from 'src/components/_notion/YoutubeEmbed'
+import Text from 'src/components/_notion/text'
+import AnchorLink from 'src/components/_notion/anchor-link'
+import CodeBlock from 'src/components/_notion/code-block'
+import Callout from 'src/components/_notion/callout'
+import YoutubeEmbed from 'src/components/_notion/youtube-embed'
 
-export function renderBlocks(block) {
+export function RenderBlocks(block) {
   const { type, id } = block
   const value = block[type]
 
@@ -72,7 +72,7 @@ export function renderBlocks(block) {
             <Text text={value.text} />
           </summary>
           {value.children?.map(block => (
-            <Fragment key={block.id}>{renderBlocks(block)}</Fragment>
+            <Fragment key={block.id}>{RenderBlocks(block)}</Fragment>
           ))}
         </details>
       )

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { getAllArticles, getArticlePage, getArticlePageData } from 'utils/notion'
 import { Layout } from 'src/components/templates/layout'
 import Image from 'next/image'
-import { renderBlocks } from 'src/components/_notion/renderBlocks'
+import { RenderBlocks } from 'src/components/_notion/render-blocks'
 import getLocalizedDate from 'utils/get-localized-date'
 import slugify from 'slugify'
 import ArticleList from 'src/components/organisms/article-list'
@@ -57,7 +57,7 @@ const ArticlePage = ({
           </div>
           <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8">
             {content.map(block => (
-              <Fragment key={block.id}>{renderBlocks(block)}</Fragment>
+              <Fragment key={block.id}>{RenderBlocks(block)}</Fragment>
             ))}
           </div>
           <div className="py-12 border-t">
