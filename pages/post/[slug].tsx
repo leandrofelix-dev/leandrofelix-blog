@@ -1,13 +1,13 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
 import { getAllArticles, getArticlePage, getArticlePageData } from 'utils/notion'
-import { Layout } from 'layouts/Layout'
+import { Layout } from 'src/components/templates/layout'
 import Image from 'next/image'
-import { renderBlocks } from 'components/notionBlocks/renderBlocks'
-import getLocalizedDate from 'utils/getLocalizedDate'
-import Container from 'components/Container'
+import { renderBlocks } from 'src/components/_notion/renderBlocks'
+import getLocalizedDate from 'utils/get-localized-date'
 import slugify from 'slugify'
-import ArticleList from 'components/organisms/article-list'
+import ArticleList from 'src/components/organisms/article-list'
+import Container from 'src/components/molecules/container'
 
 const ArticlePage = ({
   content,
@@ -16,19 +16,14 @@ const ArticlePage = ({
   publishedDate,
   summary,
   moreArticles,
-
 }) => {
   const publishedOn = getLocalizedDate(publishedDate)
 
   const slug = slugify(title).toLowerCase()
 
   const ogImage = `https://www.phung.io/api/og-image?title=${encodeURIComponent(
-    title
+    title,
   )}&date=${encodeURIComponent(publishedOn)}`
-
-  // const ogImage = `${siteData.websiteUrl}/api/og-image?title=${encodeURIComponent(
-  //   title
-  // )}&date=${encodeURIComponent(publishedOn)}`
 
   return (
     <>
@@ -55,7 +50,10 @@ const ArticlePage = ({
           </div>
 
           <div className="max-w-5xl px-6 mx-auto my-16 md:px-8">
-            <img className="object-cover w-full rounded-xl aspect-video" src={coverImage} />
+            <img
+              className="object-cover w-full rounded-xl aspect-video"
+              src={coverImage}
+            />
           </div>
           <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8">
             {content.map(block => (
@@ -89,15 +87,15 @@ export const getStaticPaths = async () => {
     if (result.object === 'page') {
       paths.push({
         params: {
-          slug: slugify(result.properties.title.title[0].plain_text).toLowerCase()
-        }
+          slug: slugify(result.properties.title.title[0].plain_text).toLowerCase(),
+        },
       })
     }
   })
 
   return {
     paths,
-    fallback: 'blocking'
+    fallback: 'blocking',
   }
 }
 
@@ -109,7 +107,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   return {
     props: result,
-    revalidate: 30
+    revalidate: 30,
   }
 }
 

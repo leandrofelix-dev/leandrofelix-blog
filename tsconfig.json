@@ -21,7 +21,7 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/_document.tsx",
-    "pages/api/og-image.ts"
+    "pages/api2/og-image.ts"
   ],
   "exclude": ["node_modules"]
 }

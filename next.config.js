@@ -3,39 +3,39 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com'
+        hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com',
       },
       {
         protocol: 'https',
-        hostname: 's3.us-west-2.amazonaws.com'
+        hostname: 's3.us-west-2.amazonaws.com',
       },
       {
         protocol: 'https',
-        hostname: 'via.placeholder.com'
+        hostname: 'via.placeholder.com',
       },
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com'
+        hostname: 'images.unsplash.com',
       },
       {
         protocol: 'https',
-        hostname: 'pbs.twimg.com'
+        hostname: 'pbs.twimg.com',
       },
       {
         protocol: 'https',
-        hostname: 'dwgyu36up6iuz.cloudfront.net'
+        hostname: 'dwgyu36up6iuz.cloudfront.net',
       },
       {
         protocol: 'https',
-        hostname: 'cdn.hashnode.com'
+        hostname: 'cdn.hashnode.com',
       },
       {
         protocol: 'https',
-        hostname: 'res.craft.do'
+        hostname: 'res.craft.do',
       },
       {
         protocol: 'https',
-        hostname: 'res.cloudinary.com'
+        hostname: 'res.cloudinary.com',
       },
     ],
   },
