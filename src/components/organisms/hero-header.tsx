@@ -1,13 +1,14 @@
 import { firaCode, inter } from 'pages/_app'
+import Container from '../molecules/container'
 
 export default function HeroHeader() {
   return (
-    <div className="bg-hero p-40 bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center px-20 rounded-3xl mx-12">
-      <div className="w-2/3 flex flex-col gap-4">
+    <Container>
+      <div className="bg-hero p-40 bg-cover bg-no-repeat bg-center items-center justify-center px-20 rounded-3xl w-98 flex flex-col gap-4 bg-red-600 lg:items-center">
         <h1
           className={[
             firaCode.className,
-            'text-slate-200 font-semibold text-5xl leading-snug',
+            'text-slate-200 font-semibold text-4xl md:text-5xl md:leading-snug',
           ].join(' ')}
         >
           Tudo sobre tecnologia, de{' '}
@@ -22,6 +23,6 @@ export default function HeroHeader() {
           <b>compartilhamento de conhecimento</b>.
         </span>
       </div>
-    </div>
+    </Container>
   )
 }

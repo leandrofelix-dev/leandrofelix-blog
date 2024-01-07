@@ -1,31 +1,21 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from 'src/components/atoms/button'
-import { SocialLinks } from 'src/components/molecules/social-links'
 import links from 'data/links'
-import Container from 'src/components/molecules/container'
+import { Button } from '../atoms/button'
+import Container from '../molecules/container'
+import { SocialLinks } from '../molecules/social-links'
 
 export default function Navbar() {
   return (
     <div className="fixed z-10 w-full pt-6">
       <Container>
-        <div className="flex flex-col-reverse justify-between w-full backdrop-blur-sm rounded-2xl p-4 bg-slate-50 items-center border border-slate-200 gap-4 sm:flex-row sm:gap-0">
+        <div className="mx-6 md:mx-20 flex flex-col justify-between lg:max-w-5xl backdrop-blur-sm rounded-2xl p-4 bg-slate-50 items-center border border-slate-200 gap-4 sm:flex-row md:gap-0">
           <Link href={links.blog} passHref>
-            <Image
-              src={'/leandrofelix.dev.svg'}
-              width={200}
-              height={28}
-              alt="logo"
-              className="w-80 sm:w-52"
-            />
+            <Image src={'/leandrofelix.dev.svg'} width={200} height={28} alt="logo" />
           </Link>
-          <div className="flex gap-3 items-center w-full sm:w-auto justify-between flex-row sm:flex-row">
+          <div className="flex gap-3 items-center">
             <SocialLinks />
-            <Button
-              href={links.portfolio}
-              value={'Portfolio'}
-              className={'h-12 w-40 sm:h-auto sm:w-auto'}
-            />
+            <Button href={links.portfolio} value={'Portfolio'} />
           </div>
         </div>
       </Container>

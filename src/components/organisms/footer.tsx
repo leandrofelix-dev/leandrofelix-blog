@@ -11,11 +11,10 @@ import Container from 'src/components/molecules/container'
 export default function Footer() {
   const [isConfettiVisible, setIsConfettiVisible] = useState(false)
   return (
-    <footer className="py-16 bg-slate-50 border-t flex">
+    <footer className="py-16 bg-slate-50 border-t flex flex-col md:flex-row justify-left">
       <Container>
         <Label value="websites" />
         <Separator />
-
         <div
           className="mt-4 flex flex-col"
           onMouseEnter={() => setIsConfettiVisible(true)}
@@ -28,8 +27,10 @@ export default function Footer() {
         {isConfettiVisible && <Confetti />}
       </Container>
       <Container>
-        <Label value="social" />
-        <Separator />
+        <div className="hidden md:block">
+          <Label value="social" />
+          <Separator />
+        </div>
         <div className="mt-4 flex flex-col">
           <SocialLinks />
         </div>
