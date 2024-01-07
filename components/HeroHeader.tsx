@@ -10,8 +10,8 @@ export default function HeroHeader() {
             'text-slate-200 font-semibold text-5xl leading-snug'
           ].join(' ')}
         >
-          Tudo sobre tecnologia,{' '}
-          <span className="bg-slate-50 text-slate-900 ">de dev para dev</span>.
+          Tudo sobre tecnologia, de{' '}
+          <span className="bg-slate-50 text-slate-900 "> dev para dev</span>.
         </h1>
         <span className={[inter.className, 'text-slate-300 text-lg font-thin uppercase'].join(' ')}>
           Um espaço voltado ao <b>aprendizado</b> contínuo e <b>compartilhamento de conhecimento</b>.
