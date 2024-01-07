@@ -5,9 +5,9 @@ import { Layout } from 'layouts/Layout'
 import Image from 'next/image'
 import { renderBlocks } from 'components/notionBlocks/renderBlocks'
 import getLocalizedDate from 'utils/getLocalizedDate'
-import Container from 'components/Container'
 import slugify from 'slugify'
 import ArticleList from 'components/organisms/article-list'
+import Container from 'components/molecules/container'
 
 const ArticlePage = ({
   content,

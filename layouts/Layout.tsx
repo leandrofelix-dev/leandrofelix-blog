@@ -1,4 +1,4 @@
-import Subscribe from 'components/Subscribe'
+// import Subscribe from 'components/Subscribe'
 // import Footer from './Footer'
 import { MetaHead } from './MetaHead'
 import Navbar from 'components/organisms/navbar'
@@ -23,7 +23,7 @@ export function Layout(props) {
       <MetaHead {...metaHeadProps} />
       <Navbar />
       <div className="pt-14">{children}</div>
-      {FORM_ID && API_KEY && <Subscribe />}
+      {/* {FORM_ID && API_KEY && <Subscribe />} */}
 
       <Footer />
     </>

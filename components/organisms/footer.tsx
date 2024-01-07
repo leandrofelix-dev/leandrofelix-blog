@@ -1,4 +1,3 @@
-import Container from 'components/Container'
 import { Label } from 'components/atoms/footer-section-label'
 import { Separator } from 'components/molecules/separator'
 import { SocialLinks } from 'components/molecules/social-links'
@@ -7,6 +6,7 @@ import links from 'data/links'
 
 import Confetti from 'components/atoms/confetti'
 import { useState } from 'react'
+import Container from 'components/molecules/container'
 
 export default function Footer() {
   const [isConfettiVisible, setIsConfettiVisible] = useState(false)

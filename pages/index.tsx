@@ -1,11 +1,11 @@
 import { convertToArticleList, getAllArticles } from 'utils/notion'
 import { Layout } from 'layouts/Layout'
 import HeroHeader from 'components/HeroHeader'
-import Container from 'components/Container'
 import { useState } from 'react'
 import { filterArticles } from 'utils/filterArticles'
 import Category from 'components/atoms/category'
 import ArticleList from 'components/organisms/article-list'
+import Container from 'components/molecules/container'
 
 export default function Index({ articles, categories }) {
   const [selectedTag, setSelectedTag] = useState<string>(null)

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Container from 'components/Container'
 import { Button } from 'components/atoms/button'
 import { SocialLinks } from 'components/molecules/social-links'
 import links from 'data/links'
+import Container from 'components/molecules/container'
 
 export default function Navbar() {
   return (
