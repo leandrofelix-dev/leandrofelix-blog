@@ -4,7 +4,7 @@ import Container from '../molecules/container'
 export default function HeroHeader() {
   return (
     <Container>
-      <div className="bg-hero p-40 bg-cover bg-no-repeat bg-center items-center justify-center px-20 rounded-3xl w-98 flex flex-col gap-4 bg-red-600 lg:items-center">
+      <div className="bg-hero p-40 bg-cover bg-no-repeat bg-center items-center justify-center px-20 rounded-3xl w-98 flex flex-col gap-4 bg-slate-900 lg:items-center">
         <h1
           className={[
             firaCode.className,
