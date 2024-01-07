@@ -2,7 +2,7 @@ import { Client } from '@notionhq/client'
 import slugify from 'slugify'
 
 const notion = new Client({
-  auth: process.env.NOTION_SECRET
+  auth: process.env.NOTION_SECRET,
 })
 
 export const getAllArticles = async databaseId => {
@@ -13,17 +13,17 @@ export const getAllArticles = async databaseId => {
         {
           property: 'status',
           select: {
-            equals: '✅ Published'
-          }
-        }
-      ]
+            equals: '✅ Published',
+          },
+        },
+      ],
     },
     sorts: [
       {
         property: 'published',
-        direction: 'descending'
-      }
-    ]
+        direction: 'descending',
+      },
+    ],
   })
 
   return response.results
@@ -39,14 +39,14 @@ const mapArticleProperties = article => {
       properties?.categories?.multi_select.map((category: any) => category.name) || [],
     author: {
       name: properties.Author.created_by.name,
-      imageUrl: properties.Author.created_by.avatar_url
+      imageUrl: properties.Author.created_by.avatar_url,
     },
     coverImage:
       properties?.coverImage?.files[0]?.file?.url ||
       properties?.coverImage?.files[0]?.external?.url ||
       '/image-background.png',
     publishedDate: properties.published?.date?.start,
-    summary: properties?.summary.rich_text[0]?.plain_text ?? ''
+    summary: properties?.summary.rich_text[0]?.plain_text ?? '',
   }
 }
 
@@ -77,21 +77,21 @@ export const getMoreArticlesToSuggest = async (databaseId, currentArticleTitle) 
         {
           property: 'status',
           select: {
-            equals: '✅ Published'
-          }
+            equals: '✅ Published',
+          },
         },
         {
           property: 'title',
           text: {
-            does_not_equal: currentArticleTitle
-          }
-        }
-      ]
-    }
+            does_not_equal: currentArticleTitle,
+          },
+        },
+      ],
+    },
   })
 
   const moreArticles = response.results.map((article: any) =>
-    mapArticleProperties(article)
+    mapArticleProperties(article),
   )
 
   return shuffleArray(moreArticles).slice(0, 2)
@@ -101,7 +101,7 @@ export const getArticlePage = (data, slug) => {
   const response = data.find(result => {
     if (result.object === 'page') {
       const resultSlug = slugify(
-        result.properties.title.title[0].plain_text
+        result.properties.title.title[0].plain_text,
       ).toLowerCase()
       return resultSlug === slug
     }
@@ -117,10 +117,10 @@ export function shuffleArray(array: Array<any>) {
   while (currentIndex != 0) {
     // Pick a random element
     randomIndex = Math.floor(Math.random() * currentIndex)
-    currentIndex--;
+    currentIndex--
 
     // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+    ;[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
   }
   return array
 }
@@ -134,7 +134,7 @@ export const getArticlePageData = async (page: any, slug: any, databaseId) => {
   const moreArticles: any = await getMoreArticlesToSuggest(databaseId, title)
 
   let blocks = await notion.blocks.children.list({
-    block_id: page.id
+    block_id: page.id,
   })
 
   content = [...blocks.results]
@@ -142,7 +142,7 @@ export const getArticlePageData = async (page: any, slug: any, databaseId) => {
   while (blocks.has_more) {
     blocks = await notion.blocks.children.list({
       block_id: page.id,
-      start_cursor: blocks.next_cursor
+      start_cursor: blocks.next_cursor,
     })
 
     content = [...content, ...blocks.results]
@@ -152,6 +152,6 @@ export const getArticlePageData = async (page: any, slug: any, databaseId) => {
     ...mapArticleProperties(page),
     content,
     slug,
-    moreArticles
+    moreArticles,
   }
 }

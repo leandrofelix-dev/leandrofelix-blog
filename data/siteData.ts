@@ -10,7 +10,7 @@ const siteData = {
   github: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter',
   twitter: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter',
   websiteUrl: 'https://nextjs-notion-blog-starter.vercel.app',
-  linkedin: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter'
+  linkedin: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter',
 }
 
 export default siteData

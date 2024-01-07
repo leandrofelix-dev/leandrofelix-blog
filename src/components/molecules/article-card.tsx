@@ -5,8 +5,8 @@ import Image from 'next/image'
 import { firaCode, inter } from 'pages/_app'
 
 type Props = {
-  article: Article;
-};
+  article: Article
+}
 
 export default function ArticleCard({ article }: Props) {
   const slug = slugify(article.title).toLowerCase()
@@ -21,7 +21,10 @@ export default function ArticleCard({ article }: Props) {
             {article?.categories?.map(category => (
               <div
                 key={category}
-                className={[firaCode.className, 'relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-slate-900 border border-slate-200 uppercase bg-slate-100 rounded-lg left-3 top-3'].join(' ')}
+                className={[
+                  firaCode.className,
+                  'relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-slate-900 border border-slate-200 uppercase bg-slate-100 rounded-lg left-3 top-3',
+                ].join(' ')}
               >
                 {category}
               </div>
@@ -47,7 +50,7 @@ export default function ArticleCard({ article }: Props) {
             <p
               className={[
                 firaCode.className,
-                'mt-3 text-base text-gray-500 line-clamp-2'
+                'mt-3 text-base text-gray-500 line-clamp-2',
               ].join(' ')}
             >
               {article.summary}

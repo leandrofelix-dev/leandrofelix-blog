@@ -16,16 +16,14 @@ const ArticlePage = ({
   publishedDate,
   summary,
   moreArticles,
-
 }) => {
   const publishedOn = getLocalizedDate(publishedDate)
 
   const slug = slugify(title).toLowerCase()
 
   const ogImage = `https://www.phung.io/api/og-image?title=${encodeURIComponent(
-    title
+    title,
   )}&date=${encodeURIComponent(publishedOn)}`
-
 
   return (
     <>
@@ -52,7 +50,10 @@ const ArticlePage = ({
           </div>
 
           <div className="max-w-5xl px-6 mx-auto my-16 md:px-8">
-            <img className="object-cover w-full rounded-xl aspect-video" src={coverImage} />
+            <img
+              className="object-cover w-full rounded-xl aspect-video"
+              src={coverImage}
+            />
           </div>
           <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8">
             {content.map(block => (
@@ -86,15 +87,15 @@ export const getStaticPaths = async () => {
     if (result.object === 'page') {
       paths.push({
         params: {
-          slug: slugify(result.properties.title.title[0].plain_text).toLowerCase()
-        }
+          slug: slugify(result.properties.title.title[0].plain_text).toLowerCase(),
+        },
       })
     }
   })
 
   return {
     paths,
-    fallback: 'blocking'
+    fallback: 'blocking',
   }
 }
 
@@ -106,7 +107,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   return {
     props: result,
-    revalidate: 30
+    revalidate: 30,
   }
 }
 

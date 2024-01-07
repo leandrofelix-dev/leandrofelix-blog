@@ -2,8 +2,8 @@ import ArticleCard from 'src/components/molecules/article-card'
 import { Article } from 'utils/types'
 
 type Props = {
-  articles: Article[];
-};
+  articles: Article[]
+}
 
 export default function ArticleList({ articles }: Props) {
   return (

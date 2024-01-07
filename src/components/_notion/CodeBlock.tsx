@@ -1,16 +1,15 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
-// import theme from 'prism-react-renderer/themes/nightOwl';
 import { theme } from './outputTheme'
 
 import { Language } from 'utils/types'
 import { useCopyToClipboard } from 'src/hooks/useCopyToClipboard'
 
 type Props = {
-  code: string;
-  language: Language;
-  metaString?: string;
-  caption?: string;
-};
+  code: string
+  language: Language
+  metaString?: string
+  caption?: string
+}
 
 const RE = /{([\d,-]+)}/
 
@@ -20,11 +19,11 @@ const calculateLinesToHighlight = meta => {
   }
   const lineNumbers = RE.exec(meta)[1]
     .split(',')
-    .map(v => v.split('-').map(x =>parseInt(x, 10)))
+    .map(v => v.split('-').map(x => parseInt(x, 10)))
   return index => {
     const lineNumber = index + 1
     const inRange = lineNumbers.some(([start, end]) =>
-      end ? lineNumber >= start && lineNumber <= end : lineNumber === start
+      end ? lineNumber >= start && lineNumber <= end : lineNumber === start,
     )
     return inRange
   }

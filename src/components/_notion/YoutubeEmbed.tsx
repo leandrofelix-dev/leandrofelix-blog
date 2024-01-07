@@ -1,6 +1,6 @@
 type Props = {
-  url: string;
-};
+  url: string
+}
 
 export default function YoutubeEmbed({ url }: Props) {
   return (

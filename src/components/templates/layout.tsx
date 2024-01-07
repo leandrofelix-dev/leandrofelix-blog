@@ -1,7 +1,6 @@
 import Navbar from 'src/components/organisms/navbar'
 import Footer from 'src/components/organisms/footer'
-import { MetaHead }  from 'src/components/organisms/meta-head'
-
+import { MetaHead } from 'src/components/organisms/meta-head'
 
 export function Layout(props) {
   const { children, date, imageUrl, title, description, ogUrl } = props
@@ -11,7 +10,7 @@ export function Layout(props) {
     imageUrl,
     description,
     ogUrl,
-    title
+    title,
   }
 
   return (

@@ -16,7 +16,10 @@ export default function Footer() {
         <Label value="websites" />
         <Separator />
 
-        <div className="mt-4 flex flex-col" onMouseEnter={() => setIsConfettiVisible(true)}>
+        <div
+          className="mt-4 flex flex-col"
+          onMouseEnter={() => setIsConfettiVisible(true)}
+        >
           <WebsiteLinks
             link={links.portfolio}
             description={'Portfolio para concentrar informações sobre mim.'}

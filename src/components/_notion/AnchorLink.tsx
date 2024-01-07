@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { formatHashLink } from 'utils/format-hash-link'
 
 type Props = {
-  children: JSX.Element;
-  text: string;
-};
+  children: JSX.Element
+  text: string
+}
 
 export default function AnchorLink({ children, text }: Props) {
   const [hashLink, setHashLink] = useState<string>()
