@@ -1,5 +1,5 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import { theme } from './outputTheme'
+import { theme } from './_output-theme'
 
 import { Language } from 'utils/types'
 import { useCopyToClipboard } from 'src/hooks/useCopyToClipboard'
