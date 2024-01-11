@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Text from './text'
+import Text from 'src/components/_notion/text'
 import AnchorLink from 'src/components/_notion/anchor-link'
 import CodeBlock from 'src/components/_notion/code-block'
 import Callout from 'src/components/_notion/callout'
