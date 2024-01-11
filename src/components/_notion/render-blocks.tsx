@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import AnchorLink from 'src/components/_notion/anchor-link'
 import CodeBlock from 'src/components/_notion/code-block'
-import Callout from 'src/components/_notion/callout'
+import Callout from 'src/components/_notion/callout-content'
 import YoutubeEmbed from 'src/components/_notion/youtube-embed'
-import Text from 'src/components/_notion/text'
+import Text from 'src/components/_notion/text-generic'
 
 export function RenderBlocks(block) {
   const { type, id } = block
