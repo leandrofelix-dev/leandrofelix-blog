@@ -8,21 +8,21 @@ export function SocialLinks() {
         <LinkedinLogo
           size={24}
           weight="fill"
-          className="text-slate-900 hover:text-blue-700"
+          className="text-black hover:text-blue-700"
         />
       </Link>
       <Link href={links.github}>
         <GithubLogo
           size={24}
           weight="fill"
-          className="text-slate-900 hover:text-slate-700"
+          className="text-black hover:text-slate-700"
         />
       </Link>
       <Link href={links.instagram}>
         <InstagramLogo
           size={24}
           weight="fill"
-          className="text-slate-900  hover:text-pink-700"
+          className="text-black  hover:text-pink-700"
         />
       </Link>
     </div>

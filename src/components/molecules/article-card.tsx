@@ -23,7 +23,7 @@ export default function ArticleCard({ article }: Props) {
                 key={category}
                 className={[
                   firaCode.className,
-                  'relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-slate-900 border border-slate-200 uppercase bg-slate-100 rounded-lg left-3 top-3',
+                  'relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-black border border-slate-200 uppercase bg-slate-100 rounded-lg left-3 top-3',
                 ].join(' ')}
               >
                 {category}
@@ -43,7 +43,7 @@ export default function ArticleCard({ article }: Props) {
         <div className={'flex flex-col justify-between flex-1 py-4 bg-white'}>
           <div className="flex-1">
             <p
-              className={[inter.className, 'text-xl font-bold text-slate-900'].join(' ')}
+              className={[inter.className, 'text-xl font-bold text-black'].join(' ')}
             >
               {article.title}
             </p>
