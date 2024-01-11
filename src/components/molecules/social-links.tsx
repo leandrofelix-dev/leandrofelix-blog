@@ -1,6 +1,6 @@
 import { LinkedinLogo, GithubLogo, InstagramLogo } from '@phosphor-icons/react'
 import Link from 'next/link'
-import links from 'data/links'
+import links from '_shared/links'
 export function SocialLinks() {
   return (
     <div className="flex gap-4">

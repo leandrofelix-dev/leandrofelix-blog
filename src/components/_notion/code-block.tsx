@@ -9,7 +9,7 @@ type Props = {
   language: Language
   metaString?: string
   caption?: string
-}˚
+}
 
 const RE = /{([\d,-]+)}/
 

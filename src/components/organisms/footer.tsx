@@ -2,7 +2,7 @@ import { Label } from 'src/components/atoms/footer-section-label'
 import { Separator } from 'src/components/molecules/separator'
 import { SocialLinks } from 'src/components/molecules/social-links'
 import { WebsiteLinks } from 'src/components/molecules/website-links'
-import links from 'data/links'
+import links from '_shared/links'
 
 import Confetti from 'src/components/atoms/confetti'
 import { useState } from 'react'

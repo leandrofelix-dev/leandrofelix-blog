@@ -1,4 +1,4 @@
-import links from 'data/links'
+import links from '_shared/links'
 import Link from 'next/link'
 import { firaCode } from 'pages/_app'
 

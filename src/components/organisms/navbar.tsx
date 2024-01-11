@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import links from 'data/links'
+import links from '_shared/links'
 import { Button } from '../atoms/button'
 import Container from '../molecules/container'
 import { SocialLinks } from '../molecules/social-links'

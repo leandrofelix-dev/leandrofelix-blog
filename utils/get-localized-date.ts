@@ -1,4 +1,4 @@
-import siteData from 'data/siteData'
+import siteData from '_shared/siteData'
 
 export default function getLocalizedDate(date) {
   return new Date(date).toLocaleDateString(siteData.locale, {
