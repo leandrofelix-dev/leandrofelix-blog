@@ -1,8 +1,7 @@
 import { firaCode } from 'pages/_app'
 
 export default function Text({ text }) {
-  if (!text)
-    return null
+  if (!text) return null
 
   return text.map((value, index) => {
     const {
@@ -12,7 +11,8 @@ export default function Text({ text }) {
     return (
       <span
         key={index}
-        className={[firaCode.className,
+        className={[
+          firaCode.className,
           bold ? 'font-bold' : null,
           italic ? 'italic' : null,
           code
@@ -21,8 +21,7 @@ export default function Text({ text }) {
           strikethrough ? 'line-through' : null,
           underline ? 'underline' : null,
         ].join(' ')}
-        style={color !== 'default' ? { color } : {}
-      }
+        style={color !== 'default' ? { color } : {}}
       >
         {text.link ? (
           <a className="text-gray-700 underline" href={text.link.url}>
