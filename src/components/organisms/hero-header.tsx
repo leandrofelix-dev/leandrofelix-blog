@@ -1,4 +1,4 @@
-import { firaCode, inter } from 'pages/_app'
+import { firaCode, sourceSans } from 'pages/_app'
 import Container from '../molecules/container'
 
 export default function HeroHeader() {
@@ -15,12 +15,15 @@ export default function HeroHeader() {
           <span className="bg-slate-50 text-black "> dev para dev</span>.
         </h1>
         <span
-          className={[inter.className, 'text-slate-300 text-lg font-thin uppercase'].join(
+          className={[sourceSans.className, 'text-slate-300/80 text-medium uppercase tracking-wide'].join(
             ' ',
           )}
         >
-          Um espaço voltado ao <b>aprendizado</b> contínuo e{' '}
-          <b>compartilhamento de conhecimento</b>.
+          {'< Um espaço voltado ao '}
+          <b className='text-slate-300'>{'aprendizado '}</b>
+          {'contínuo e '}
+          <b className='text-slate-300'>{'compartilhamento de conhecimento '}</b>
+          {'/>'}.
         </span>
       </div>
     </Container>

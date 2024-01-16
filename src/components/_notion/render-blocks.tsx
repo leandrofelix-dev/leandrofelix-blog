@@ -4,6 +4,7 @@ import CodeBlock from 'src/components/_notion/code-block'
 import Callout from 'src/components/_notion/callout-content'
 import YoutubeEmbed from 'src/components/_notion/youtube-embed'
 import Text from 'src/components/_notion/text-generic'
+import { sourceSans } from 'pages/_app'
 
 export function RenderBlocks(block) {
   const { type, id } = block
@@ -12,13 +13,13 @@ export function RenderBlocks(block) {
   switch (type) {
     case 'paragraph':
       return (
-        <p className="leading-[28px] text-lg">
+        <p className={[sourceSans.className, 'pt-1 leading-[34px] text-zinc-500 text-xl tracking-wide'].join(' ')}>
           <Text text={value.text} />
         </p>
       )
     case 'heading_1':
       return (
-        <div className="pt-16 text-3xl font-semibold">
+        <div className="pt-16 text-3xl font-semibold text-zinc-900">
           <AnchorLink text={value.text[0].text.content}>
             <Text text={value.text} />
           </AnchorLink>
@@ -26,7 +27,7 @@ export function RenderBlocks(block) {
       )
     case 'heading_2':
       return (
-        <div className="pt-8 text-2xl font-semibold">
+        <div className={[sourceSans.className, 'pt-8 text-4xl text-gray-700 font-semibold'].join(' ')}>
           <AnchorLink text={value.text[0].text.content}>
             <Text text={value.text} />
           </AnchorLink>
@@ -34,7 +35,7 @@ export function RenderBlocks(block) {
       )
     case 'heading_3':
       return (
-        <div className="pt-8 text-xl font-semibold">
+        <div className={[sourceSans.className, 'pt-6 text-3xl text-gray-700 font-semibold'].join(' ')}>
           <AnchorLink text={value.text[0].text.content}>
             <Text text={value.text} />
           </AnchorLink>

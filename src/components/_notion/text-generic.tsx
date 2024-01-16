@@ -1,4 +1,4 @@
-import { firaCode } from 'pages/_app'
+import { sourceSans, firaCode } from 'pages/_app'
 
 export default function Text({ text }) {
   if (!text) return null
@@ -12,7 +12,7 @@ export default function Text({ text }) {
       <span
         key={index}
         className={[
-          firaCode.className,
+          sourceSans.className,
           bold ? 'font-bold' : null,
           italic ? 'italic' : null,
           code

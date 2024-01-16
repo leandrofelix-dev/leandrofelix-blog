@@ -4,7 +4,6 @@ import { SocialLinks } from 'src/components/molecules/social-links'
 import { WebsiteLinks } from 'src/components/molecules/website-links'
 import links from '_shared/links'
 
-import Confetti from 'src/components/atoms/confetti'
 import { useState } from 'react'
 import Container from 'src/components/molecules/container'
 
@@ -17,14 +16,12 @@ export default function Footer() {
         <Separator />
         <div
           className="mt-4 flex flex-col"
-          onMouseEnter={() => setIsConfettiVisible(true)}
         >
           <WebsiteLinks
             link={links.portfolio}
             description={'Portfolio para concentrar informações sobre mim.'}
           />
         </div>
-        {isConfettiVisible && <Confetti />}
       </Container>
       <Container>
         <div className="hidden md:block">

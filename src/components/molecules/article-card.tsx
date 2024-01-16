@@ -2,7 +2,7 @@ import { Article } from 'utils/types'
 import slugify from 'slugify'
 import getLocalizedDate from 'utils/get-localized-date'
 import Image from 'next/image'
-import { firaCode, inter } from 'pages/_app'
+import { firaCode, sourceSans } from 'pages/_app'
 
 type Props = {
   article: Article
@@ -14,7 +14,7 @@ export default function ArticleCard({ article }: Props) {
   const formattedTime = getLocalizedDate(article.publishedDate)
 
   return (
-    <a href={`/post/${slug}`}>
+    <a href={`/post/${slug}`} className='p-4 rounded-3xl bg-white border border-slate-200'>
       <div className="flex flex-col overflow-hidden cursor-pointer group">
         <div className="relative">
           <div className="absolute">
@@ -40,10 +40,10 @@ export default function ArticleCard({ article }: Props) {
             />
           </div>
         </div>
-        <div className={'flex flex-col justify-between flex-1 py-4 bg-white'}>
+        <div className={'flex flex-col justify-between flex-1 py-4'}>
           <div className="flex-1">
             <p
-              className={[inter.className, 'text-xl font-bold text-black'].join(' ')}
+              className={[sourceSans.className, 'text-xl font-bold text-black'].join(' ')}
             >
               {article.title}
             </p>
@@ -60,13 +60,12 @@ export default function ArticleCard({ article }: Props) {
             <div className="flex mb-2 space-x-1 text-sm text-gray-400">
               {article.categories.map(category => (
                 <div key={category}>
-                  <span className="font-semibold text-gray-600">{category} </span>
+                  <span className={[firaCode.className, 'font-semibold text-slate-600'].join(' ')}>{category} </span>
                   <span aria-hidden="true">&middot;</span>
                 </div>
               ))}
-              <time dateTime={formattedTime}>{formattedTime}</time>
+              <time className='text-slate-400' dateTime={formattedTime}>{formattedTime}</time>
             </div>
-            {/* <p className="text-sm font-medium text-gray-900">{article?.author?.name}</p> */}
           </div>
         </div>
       </div>

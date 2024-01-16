@@ -17,7 +17,7 @@ export function Layout(props) {
     <>
       <MetaHead {...metaHeadProps} />
       <Navbar />
-      <main className="pt-14">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   )
