@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getAllArticles, getArticlePage, getArticlePageData } from 'utils/notion'
 import { Layout } from 'src/components/templates/layout'
 import { RenderBlocks } from 'src/components/_notion/render-blocks'
@@ -35,22 +36,38 @@ const ArticlePage = ({
         ogUrl={`/blog/${slug}`}
       >
         <div>
-          <div className={'pt-40 px-6 py-16 pb-48 mx-auto -mb-48 text-center md:pb-96 md:-mb-96 bg-cover'} >
+          <div
+            className={
+              'pt-40 px-6 py-16 pb-48 mx-auto -mb-48 text-center md:pb-96 md:-mb-96 bg-cover'
+            }
+          >
             <div className="max-w-3xl mx-auto">
-              
-              <div className={[sourceSans.className,'font-bold text-zinc-700 text-6xl sm:text-4xl tracking-wide'].join(' ')}>
+              <div
+                className={[
+                  sourceSans.className,
+                  'font-bold text-zinc-700 text-6xl sm:text-4xl tracking-wide',
+                ].join(' ')}
+              >
                 {title}
               </div>
-              <div className="mt-4 flex items-center justify-center mb-2 space-x-2 text-sm text-gray-400">
+              <div className="mt-4 flex items-center justify-center mb-2 space-x-2 text-sm text-zinc-400">
                 <div className={firaCode.className}>{`Postado em ${publishedOn}`}</div>
               </div>
-              {/* <div className={[sourceSans.className, 'max-w-3xl mx-auto mt-3 text-xl leading-8 text-gray-500 sm:mt-4'].join(' ')}>
-                {summary}
-              </div> */}
             </div>
           </div>
 
           <div className="max-w-5xl px-6 mx-auto my-16 md:px-8">
+            {coverImage && (
+              <div className="relative w-full h-64 mb-8 overflow-hidden rounded-lg shadow-lg md:h-96">
+                <Image
+                  width={1000}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  src={coverImage}
+                  alt={title}
+                />
+              </div>
+            )}
           </div>
           <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8">
             {content.map(block => (
@@ -60,9 +77,9 @@ const ArticlePage = ({
           <div className="py-12 border-t">
             <Container>
               <div className="flex items-center justify-between my-8">
-                <div className="text-3xl font-bold text-gray-900">Últimas postagens</div>
+                <div className="text-3xl font-bold text-zinc-900">Últimas postagens</div>
                 <Link href="/">
-                  <span className="font-semibold text-gray-900 cursor-pointer">
+                  <span className="font-semibold text-zinc-900 cursor-pointer">
                     Ver mais ➜
                   </span>
                 </Link>

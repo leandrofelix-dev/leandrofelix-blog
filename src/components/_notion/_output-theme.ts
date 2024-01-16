@@ -2,8 +2,8 @@ import { PrismTheme } from 'prism-react-renderer'
 
 export const theme: PrismTheme = {
   plain: {
-    color: '#abb2bf',
-    backgroundColor: '#282c34',
+    color: 'rgb(144, 122, 169)',
+    backgroundColor: 'rgb(35, 33, 54)',
   },
   styles: [
     {
@@ -16,7 +16,7 @@ export const theme: PrismTheme = {
     {
       types: ['keyword', 'operator', 'selector', 'changed'],
       style: {
-        color: 'rgb(198, 120, 221)',
+        color: 'rgb(86, 148, 159)',
       },
     },
     {
@@ -40,19 +40,19 @@ export const theme: PrismTheme = {
     {
       types: ['string', 'inserted'],
       style: {
-        color: 'rgb(152, 195, 121)',
+        color: 'rgb(234, 157, 52)',
       },
     },
     {
       types: ['punctuation'],
       style: {
-        color: 'rgb(92, 99, 112)',
+        color: 'rgb(180, 99, 122)',
       },
     },
     {
       types: ['function'],
       style: {
-        color: 'rgb(97, 175, 239)',
+        color: 'rgb(215, 130, 126)',
       },
     },
     {

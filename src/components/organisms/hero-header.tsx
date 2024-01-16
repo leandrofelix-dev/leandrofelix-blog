@@ -8,21 +8,21 @@ export default function HeroHeader() {
         <h1
           className={[
             firaCode.className,
-            'text-slate-200 font-semibold text-4xl md:text-5xl md:leading-snug',
+            'text-zinc-200 font-semibold text-4xl md:text-5xl md:leading-snug',
           ].join(' ')}
         >
           Tudo sobre tecnologia, de{' '}
-          <span className="bg-slate-50 text-black "> dev para dev</span>.
+          <span className="bg-zinc-50 text-black "> dev para dev</span>.
         </h1>
         <span
-          className={[sourceSans.className, 'text-slate-300/80 text-medium uppercase tracking-wide'].join(
+          className={[sourceSans.className, 'text-zinc-300/80 text-medium uppercase tracking-wide'].join(
             ' ',
           )}
         >
           {'< Um espaço voltado ao '}
-          <b className='text-slate-300'>{'aprendizado '}</b>
+          <b className='text-zinc-300'>{'aprendizado '}</b>
           {'contínuo e '}
-          <b className='text-slate-300'>{'compartilhamento de conhecimento '}</b>
+          <b className='text-zinc-300'>{'compartilhamento de conhecimento '}</b>
           {'/>'}.
         </span>
       </div>

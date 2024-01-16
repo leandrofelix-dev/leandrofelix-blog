@@ -16,7 +16,7 @@ export default function Text({ text }) {
           bold ? 'font-bold' : null,
           italic ? 'italic' : null,
           code
-            ? 'bg-gray-200 font-semibold text-sm px-2 rounded mx-1 inline-block align-middle tracking-tight'
+            ? 'bg-zinc-200 font-semibold text-sm px-2 rounded mx-1 inline-block align-middle tracking-tight'
             : null,
           strikethrough ? 'line-through' : null,
           underline ? 'underline' : null,
@@ -24,7 +24,7 @@ export default function Text({ text }) {
         style={color !== 'default' ? { color } : {}}
       >
         {text.link ? (
-          <a className="text-gray-700 underline" href={text.link.url}>
+          <a className="text-zinc-700 underline" href={text.link.url}>
             {text.content}
           </a>
         ) : (

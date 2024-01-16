@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <div className="fixed z-10 w-full pt-6">
       <Container>
-        <div className="mx-6 md:mx-20 flex flex-col justify-between lg:max-w-5xl backdrop-blur-sm rounded-2xl p-4 bg-slate-50 items-center border border-slate-200 gap-4 sm:flex-row md:gap-0">
+        <div className="mx-6 md:mx-20 flex flex-col justify-between lg:max-w-5xl backdrop-blur-sm rounded-2xl p-4 bg-zinc-50 items-center border border-zinc-200 gap-4 sm:flex-row md:gap-0">
           <Link href={links.blog} passHref>
             <Image src={'/leandrofelix.dev.svg'} width={200} height={28} alt="logo" />
           </Link>

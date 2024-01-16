@@ -36,7 +36,7 @@ export default function CodeBlock({ code, language, metaString, caption }: Props
   const CopyCodeButton = (
     <button
       className={`hidden md:inline-block group ${
-        isCopied ? 'text-teal-500' : 'text-gray-400'
+        isCopied ? 'text-[rgb(156, 207, 216)]-300/80' : 'text-gray-400'
       }`}
       onClick={() => handleCopy()}
     >
@@ -110,11 +110,11 @@ export default function CodeBlock({ code, language, metaString, caption }: Props
               style={style}
             >
               <div className="relative flex text-xs leading-6 ">
-                <div className="flex items-center flex-none px-4 py-1 mt-2 text-sm text-teal-400 border-t border-b border-t-transparent border-b-teal-400">
+                <div className="flex items-center flex-none px-4 py-1 mt-2 text-sm text-[rgb(156, 207, 216)]-300/80 border-t border-b border-t-transparent border-b-teal-400">
                   {caption || JSON.stringify(language).replace(/['"]+/g, '')}{' '}
                 </div>
                 <div className="flex flex-auto pt-2 overflow-hidden rounded-tr-xl">
-                  <div className="flex-auto -mr-px border rounded-tl bg-slate-700/50 border-slate-500/30"></div>
+                  <div className="flex-auto -mr-px border rounded-tl bg-slate-800/50 border-slate-500/30"></div>
                 </div>
                 <div className="absolute flex items-center h-8 pl-4 right-5 top-[9px]">
                   <div className="relative flex -mr-2">{CopyCodeButton}</div>

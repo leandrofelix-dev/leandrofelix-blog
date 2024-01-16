@@ -17,7 +17,7 @@ export default function AnchorLink({ children, text }: Props) {
     <div className="flex items-center justify-start space-x-2 group">
       {children}
       <div className="opacity-10 group-hover:opacity-50">
-        <a className="text-gray-600 " id={hashLink} href={`#${hashLink}`}>
+        <a className="text-zinc-600 " id={hashLink} href={`#${hashLink}`}>
           <svg className="hidden w-7 h-7 md:block" fill="none" viewBox="0 0 24 24">
             <path
               stroke="currentColor"

@@ -14,7 +14,7 @@ export function WebsiteLinks({ link, description }: WebsiteLinksProps) {
         <Link href={link} className="font-semibold text-black text-lg">
           {link.replace(/^https:\/\//, '')}
         </Link>
-        <span className="text-slate-600 font-light">{description}</span>
+        <span className="text-zinc-600 font-light">{description}</span>
       </div>
     </div>
   )

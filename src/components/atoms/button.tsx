@@ -13,7 +13,7 @@ export function Button({ href, value, className }: ButtonProps) {
       <button
         className={[
           firaCode.className,
-          `font-semibold pointer border-slate-300 border py-1 px-6 rounded-full transition-all hover:bg-slate-50/50 hover:shadow-sm ${className}`,
+          `font-semibold pointer border-zinc-300 border py-1 px-6 rounded-full transition-all hover:bg-zinc-50/50 hover:shadow-sm ${className}`,
         ].join(' ')}
       >
         {value}

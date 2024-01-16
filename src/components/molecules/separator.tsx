@@ -1,3 +1,3 @@
 export function Separator() {
-  return <div className="border-t border-slate-200 my-4"></div>
+  return <div className="border-t border-zinc-200 my-4"></div>
 }

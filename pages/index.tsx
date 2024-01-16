@@ -26,7 +26,7 @@ export default function Index({ articles, categories }) {
       </div>
       <Container>
         <div className="py-8">
-          <div className="my-8 text-3xl font-bold text-gray-900">
+          <div className="my-8 text-3xl font-bold text-zinc-900">
             {!selectedTag ? 'Últimas postagens' : `Postagens sobre ${selectedTag}`}
           </div>
           <ArticleList articles={filteredArticles} />

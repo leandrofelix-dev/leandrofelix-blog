@@ -10,7 +10,7 @@ import Container from 'src/components/molecules/container'
 export default function Footer() {
   const [isConfettiVisible, setIsConfettiVisible] = useState(false)
   return (
-    <footer className="py-16 bg-slate-50 border-t flex flex-col md:flex-row justify-left">
+    <footer className="py-16 bg-zinc-50 border-t flex flex-col md:flex-row justify-left">
       <Container>
         <Label value="websites" />
         <Separator />

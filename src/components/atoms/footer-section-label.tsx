@@ -9,7 +9,7 @@ export function Label({ value }: labelProps) {
     <span
       className={[
         sourceSans.className,
-        'font-semibold text-xs text-slate-600 tracking-widest',
+        'font-semibold text-xs text-zinc-600 tracking-widest',
       ].join(' ')}
     >
       {value.toUpperCase()}
