@@ -1,14 +1,14 @@
 export type Article = {
-  title: string;
-  categories?: Array<string>;
-  coverImage: string;
-  summary: string;
-  publishedDate?: any;
-  lastUpdatedDate?: any;
-  readingTime?: string;
-  user: any;
-  id: string;
-};
+  title: string
+  categories?: Array<string>
+  coverImage: string
+  summary: string
+  publishedDate?: any
+  lastUpdatedDate?: any
+  readingTime?: string
+  user: any
+  id: string
+}
 
 export type Language =
   | 'markup'
@@ -42,4 +42,4 @@ export type Language =
   | 'tsx'
   | 'typescript'
   | 'wasm'
-  | 'yaml';
+  | 'yaml'

@@ -1,13 +1,14 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
-import { getAllArticles, getArticlePage, getArticlePageData } from 'utils/notion'
-import { Layout } from 'layouts/Layout'
 import Image from 'next/image'
-import { renderBlocks } from 'components/notionBlocks/renderBlocks'
-import getLocalizedDate from 'utils/getLocalizedDate'
-import Container from 'components/Container'
+import { getAllArticles, getArticlePage, getArticlePageData } from 'utils/notion'
+import { Layout } from 'src/components/templates/layout'
+import { RenderBlocks } from 'src/components/_notion/render-blocks'
+import getLocalizedDate from 'utils/get-localized-date'
 import slugify from 'slugify'
-import ArticleList from 'components/organisms/article-list'
+import ArticleList from 'src/components/organisms/article-list'
+import Container from 'src/components/molecules/container'
+import { firaCode, sourceSans } from 'pages/_app'
 
 const ArticlePage = ({
   content,
@@ -16,19 +17,14 @@ const ArticlePage = ({
   publishedDate,
   summary,
   moreArticles,
-
 }) => {
   const publishedOn = getLocalizedDate(publishedDate)
 
   const slug = slugify(title).toLowerCase()
 
   const ogImage = `https://www.phung.io/api/og-image?title=${encodeURIComponent(
-    title
+    title,
   )}&date=${encodeURIComponent(publishedOn)}`
-
-  // const ogImage = `${siteData.websiteUrl}/api/og-image?title=${encodeURIComponent(
-  //   title
-  // )}&date=${encodeURIComponent(publishedOn)}`
 
   return (
     <>
@@ -40,35 +36,53 @@ const ArticlePage = ({
         ogUrl={`/blog/${slug}`}
       >
         <div>
-          <div className="px-6 py-16 pb-48 mx-auto -mb-48 text-center bg-gray-100 md:pb-96 md:-mb-96">
+          <div
+            className={
+              'pt-40 px-6 py-16 pb-48 mx-auto -mb-48 text-center md:pb-96 md:-mb-96 bg-cover'
+            }
+          >
             <div className="max-w-3xl mx-auto">
-              <div className="flex items-center justify-center mb-2 space-x-2 text-sm text-gray-500">
-                <div className="">{publishedOn}</div>
-              </div>
-              <div className="font-extrabold tracking-tight text-gray-900 text-w-4xl sm:text-4xl">
+              <div
+                className={[
+                  sourceSans.className,
+                  'font-bold text-zinc-700 text-6xl sm:text-4xl tracking-wide',
+                ].join(' ')}
+              >
                 {title}
               </div>
-              <div className="max-w-3xl mx-auto mt-3 text-xl leading-8 text-gray-500 sm:mt-4">
-                {summary}
+              <div className="mt-4 flex items-center justify-center mb-2 space-x-2 text-sm text-zinc-400">
+                <div className={firaCode.className}>{`Postado em ${publishedOn}`}</div>
               </div>
             </div>
           </div>
 
           <div className="max-w-5xl px-6 mx-auto my-16 md:px-8">
-            <img className="object-cover w-full rounded-xl aspect-video" src={coverImage} />
+            {coverImage && (
+              <div className="relative w-full h-64 mb-8 overflow-hidden rounded-lg shadow-lg md:h-96">
+                <Image
+                  width={1000}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  src={coverImage}
+                  alt={title}
+                />
+              </div>
+            )}
           </div>
           <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8">
             {content.map(block => (
-              <Fragment key={block.id}>{renderBlocks(block)}</Fragment>
+              <Fragment key={block.id}>{RenderBlocks(block)}</Fragment>
             ))}
           </div>
           <div className="py-12 border-t">
             <Container>
               <div className="flex items-center justify-between my-8">
-                <div className="text-3xl font-bold text-gray-900">Latest articles</div>
+                <div className="text-3xl font-bold text-zinc-900">Últimas postagens</div>
                 <Link href="/">
-                  <span className="font-semibold text-gray-900 cursor-pointer">
-                    More articles ➜
+                  <span className={[
+                    firaCode.className, 'text-zinc-800 cursor-pointer'].join(' ')
+                  }>
+                    Ver mais postagens ➜
                   </span>
                 </Link>
               </div>
@@ -89,15 +103,15 @@ export const getStaticPaths = async () => {
     if (result.object === 'page') {
       paths.push({
         params: {
-          slug: slugify(result.properties.title.title[0].plain_text).toLowerCase()
-        }
+          slug: slugify(result.properties.title.title[0].plain_text).toLowerCase(),
+        },
       })
     }
   })
 
   return {
     paths,
-    fallback: 'blocking'
+    fallback: 'blocking',
   }
 }
 
@@ -109,7 +123,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   return {
     props: result,
-    revalidate: 30
+    revalidate: 30,
   }
 }
 
