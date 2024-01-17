@@ -79,8 +79,10 @@ const ArticlePage = ({
               <div className="flex items-center justify-between my-8">
                 <div className="text-3xl font-bold text-zinc-900">Últimas postagens</div>
                 <Link href="/">
-                  <span className="font-semibold text-zinc-900 cursor-pointer">
-                    Ver mais ➜
+                  <span className={[
+                    firaCode.className, 'text-zinc-800 cursor-pointer'].join(' ')
+                  }>
+                    Ver mais postagens ➜
                   </span>
                 </Link>
               </div>

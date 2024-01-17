@@ -43,14 +43,14 @@ export default function ArticleCard({ article }: Props) {
         <div className={'flex flex-col justify-between flex-1 py-4'}>
           <div className="flex-1">
             <p
-              className={[sourceSans.className, 'text-xl font-bold text-black'].join(' ')}
+              className={[sourceSans.className, 'text-xl font-bold text-zinc-800'].join(' ')}
             >
               {article.title}
             </p>
             <p
               className={[
-                firaCode.className,
-                'mt-3 text-base text-zinc-500 line-clamp-2',
+                sourceSans.className,
+                'text-base text-zinc-500 line-clamp-2 pt-1 leading-[34px] tracking-wide',
               ].join(' ')}
             >
               {article.summary}
@@ -64,7 +64,7 @@ export default function ArticleCard({ article }: Props) {
                   <span aria-hidden="true">&middot;</span>
                 </div>
               ))}
-              <time className='text-zinc-400' dateTime={formattedTime}>{formattedTime}</time>
+              <time className={[sourceSans.className, 'text-zinc-400'].join(' ')} dateTime={formattedTime}>{formattedTime}</time>
             </div>
           </div>
         </div>

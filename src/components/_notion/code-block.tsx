@@ -36,7 +36,7 @@ export default function CodeBlock({ code, language, metaString, caption }: Props
   const CopyCodeButton = (
     <button
       className={`hidden md:inline-block group ${
-        isCopied ? 'text-[rgb(156, 207, 216)]-300/80' : 'text-gray-400'
+        isCopied ? 'text-[rgb(156, 207, 216)]-300/80' : 'text-zinc-400'
       }`}
       onClick={() => handleCopy()}
     >
@@ -120,7 +120,7 @@ export default function CodeBlock({ code, language, metaString, caption }: Props
                   <div className="relative flex -mr-2">{CopyCodeButton}</div>
                 </div>
               </div>
-              <div className="relative w-auto p-5 overflow-auto text-sm text-gray-300">
+              <div className="relative w-auto p-5 overflow-auto text-sm text-zinc-300">
                 <span>
                   {tokens.map((line, i) => {
                     const lineProps = getLineProps({ line, key: i })
