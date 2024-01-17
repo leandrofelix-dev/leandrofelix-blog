@@ -23,7 +23,7 @@ export default function ArticleCard({ article }: Props) {
                 key={category}
                 className={[
                   firaCode.className,
-                  'relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-black border border-zinc-200 uppercase bg-zinc-100 rounded-lg left-3 top-3',
+                  'relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-zinc-800 border border-zinc-200 uppercase bg-zinc-100 rounded-lg left-3 top-3',
                 ].join(' ')}
               >
                 {category}
