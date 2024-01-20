@@ -93,7 +93,10 @@ export function RenderBlocks(block) {
     case 'toggle':
       return (
         <details>
-          <summary>
+          <summary className={[
+          sourceSans.className,
+          'pt-1 leading-[34px] text-zinc-500 text-lg tracking-wide flex items-center justify-start space-x-3',
+        ].join(' ')}>
             <Text text={value.text} />
           </summary>
           {value.children?.map(block => (
@@ -102,7 +105,7 @@ export function RenderBlocks(block) {
         </details>
       )
     case 'child_page':
-      return <p>{value.title}</p>
+      return <p >{value.title}</p>
     case 'image':
       const src = value.type === 'external' ? value.external.url : value.file.url
       const caption = value.caption.length >= 1 ? value.caption[0].plain_text : ''
