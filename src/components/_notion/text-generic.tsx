@@ -24,7 +24,7 @@ export default function Text({ text }) {
         style={color !== 'default' ? { color } : {}}
       >
         {text.link ? (
-          <a className="text-zinc-700 underline" href={text.link.url}>
+          <a target='_blank' className="text-zinc-700 underline" href={text.link.url} rel="noreferrer">
             {text.content}
           </a>
         ) : (

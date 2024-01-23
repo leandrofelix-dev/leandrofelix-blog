@@ -9,7 +9,7 @@ interface ButtonProps {
 
 export function Button({ href, value, className }: ButtonProps) {
   return (
-    <Link href={href}>
+    <Link href={href} target={'_blank'}>
       <button
         className={[
           firaCode.className,
