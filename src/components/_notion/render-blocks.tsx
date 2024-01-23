@@ -118,7 +118,10 @@ export function RenderBlocks(block) {
             src={src}
             alt={caption ? caption : 'A visual depiction of what is being written about'}
           />
-          {caption && <figcaption className="text-center">{caption}</figcaption>}
+          {caption && <figcaption className={[
+          sourceSans.className,
+          'pt-1 leading-[34px] text-zinc-500 text-sm tracking-wide flex items-center justify-end space-x-3 italic',
+        ].join(' ')}>{'*'+caption}</figcaption>}
         </figure>
       )
     case 'code':

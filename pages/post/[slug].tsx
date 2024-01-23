@@ -58,11 +58,11 @@ const ArticlePage = ({
 
           <div className="max-w-5xl px-6 mx-auto my-16 md:px-8">
             {coverImage && (
-              <div className="relative w-full h-64 mb-8 overflow-hidden rounded-lg shadow-lg md:h-96">
+              <div className="relative w-full mb-8 overflow-hidden rounded-lg shadow-lg">
                 <Image
                   width={1000}
-                  height={400}
-                  className="object-cover w-full h-full"
+                  height={600}
+                  className="object-cover w-full aspect-video"
                   src={coverImage}
                   alt={title}
                 />
