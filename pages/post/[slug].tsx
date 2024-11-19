@@ -33,7 +33,7 @@ const ArticlePage = ({
         description={summary}
         imageUrl={ogImage}
         date={new Date(publishedDate).toISOString()}
-        ogUrl={`/blog/${slug}`}
+        ogUrl={`/post/${slug}`}
       >
         <div>
           <div
